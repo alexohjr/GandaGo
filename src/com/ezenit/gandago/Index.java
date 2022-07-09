@@ -7,6 +7,7 @@ public class Index {
 	public static void main(String[] args) {
 		System.out.println("gdgd123");
 		System.out.println("gdgd");
+		System.out.println("gdgdgdgd");
 		new LoginForm();
 	}
 }
