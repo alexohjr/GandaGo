@@ -5,7 +5,7 @@ import com.ezenit.gandago.member.forms.LoginForm;
 public class Index {  
 	
 	public static void main(String[] args) {
-		System.out.println("gdgd");
+		System.out.println("gdgd123");
 		new LoginForm();
 	}
 }
