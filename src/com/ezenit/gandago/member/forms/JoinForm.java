@@ -36,10 +36,10 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 	MemberDAO dao = MemberDAO.getInstance();
 	MemberDTO dto = new MemberDTO();
 	   
-	// ¼±¾ð
+	// ï¿½ï¿½ï¿½ï¿½
 	JPanel totalAreaPanel = new JPanel();
 	JPanel joinTitlePn = new JPanel();
-	JLabel joinTitleLb = new JLabel("È¸¿ø°¡ÀÔ");
+	JLabel joinTitleLb = new JLabel("È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	
 	JPanel inputAreaPanel = new JPanel();
 	JPanel lbPn = new JPanel();
@@ -49,13 +49,13 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 
 	JPanel btnPn = new JPanel();
 	
-	JLabel idLb = new JLabel("¾ÆÀÌµð");
-	JLabel pwdLb1 = new JLabel("ºñ¹Ð¹øÈ£");
-	JLabel pwdLb2 = new JLabel("ºñ¹Ð¹øÈ£ È®ÀÎ");
-	JLabel nameLb = new JLabel("ÀÌ¸§");
-	JLabel telLb = new JLabel("¿¬¶ôÃ³");
-	JLabel addrLb = new JLabel("ÁÖ¼Ò");
-	JLabel btdLb = new JLabel("»ý³â¿ùÀÏ");
+	JLabel idLb = new JLabel("ï¿½ï¿½ï¿½Ìµï¿½");
+	JLabel pwdLb1 = new JLabel("ï¿½ï¿½Ð¹ï¿½È£");
+	JLabel pwdLb2 = new JLabel("ï¿½ï¿½Ð¹ï¿½È£ È®ï¿½ï¿½");
+	JLabel nameLb = new JLabel("ï¿½Ì¸ï¿½");
+	JLabel telLb = new JLabel("ï¿½ï¿½ï¿½ï¿½Ã³");
+	JLabel addrLb = new JLabel("ï¿½Ö¼ï¿½");
+	JLabel btdLb = new JLabel("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	
 	JLabel hiddenIdLb = new JLabel();
 	JLabel hiddenPwdLb1 = new JLabel();
@@ -87,13 +87,13 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 	JPanel inputValiPn = new JPanel();
 	JLabel inputValiLb = new JLabel("");
 	
-	JButton joinBtn = new JButton("È¸¿ø°¡ÀÔ");
-	JButton cancelBtn = new JButton("Ãë¼Ò");
+	JButton joinBtn = new JButton("È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+	JButton cancelBtn = new JButton("ï¿½ï¿½ï¿½");
 	
 	boolean idFlag, pwdFlag1, pwdFlag2, nameFlag, telFlag, addrFlag;
 	
 	public JoinForm() {
-		setTitle("°£´ÙGo");
+		setTitle("ì°½í™˜ìž‰Goìš°");
 		setSize(500, 800);
 		setLocationRelativeTo(null);
 		setVisible(true);
@@ -256,7 +256,7 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 				String userBtd = yearCb.getSelectedItem()+"-"+monthCb.getSelectedItem()+"-"+dateCb.getSelectedItem();
 				MemberDTO dto = new MemberDTO(userId, userPwd, userName, userTel, userBtd, userAddr);
 				
-				JOptionPane.showMessageDialog(this, "È¸¿ø°¡ÀÔÀÌ ¿Ï·áµÆ½À´Ï´Ù.", "",
+				JOptionPane.showMessageDialog(this, "È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½Æ½ï¿½ï¿½Ï´ï¿½.", "",
 						JOptionPane.INFORMATION_MESSAGE);
 				
 				int result = dao.insertMember(dto);
@@ -264,7 +264,7 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 					setVisible(false);
 					new LoginForm();
 				} else {
-					showDialog("¿À·ù¹ß»ý");
+					showDialog("ï¿½ï¿½ï¿½ï¿½ï¿½ß»ï¿½");
 				}
 				
 				
@@ -285,26 +285,26 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 		
 		if(userId.equals("")) {
 			idVali.setIcon(xImg);
-			showDialog("¾ÆÀÌµð¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			idTf.requestFocus(true);
 			idFlag = false;
-			inputValiLb.setText("¾ÆÀÌµð¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			inputValiLb.setText("ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			return;
 		} else if(userId.length() < 4) {
 			idVali.setIcon(xImg);
-			showDialog("¾ÆÀÌµð´Â 4±ÛÀÚ ÀÌ»ó ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½ï¿½ï¿½Ìµï¿½ï¿½ 4ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			idTf.requestFocus(true);
 			idFlag = false;
-			inputValiLb.setText("¾ÆÀÌµð´Â 4±ÛÀÚ ÀÌ»ó ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			inputValiLb.setText("ï¿½ï¿½ï¿½Ìµï¿½ï¿½ 4ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			return;
 		} else {
 			int result = dao.idCheck(userId);
 			if(result > 0) {
 				idVali.setIcon(xImg);
-				showDialog("Áßº¹µÈ ¾ÆÀÌµðÀÔ´Ï´Ù.");
+				showDialog("ï¿½ßºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½Ô´Ï´ï¿½.");
 				idTf.requestFocus(true);
 				idFlag = false;
-				inputValiLb.setText("Áßº¹µÈ ¾ÆÀÌµðÀÔ´Ï´Ù.");
+				inputValiLb.setText("ï¿½ßºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½Ô´Ï´ï¿½.");
 				return;
 			} else {
 				inputValiLb.setText("");
@@ -313,15 +313,15 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 		
 		if(userPwd1.equals("")) {
 			pwdVali1.setIcon(xImg);
-			showDialog("ºñ¹Ð¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			inputValiLb.setText("ºñ¹Ð¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+			inputValiLb.setText("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			pwdTf1.requestFocus(true);
 			pwdFlag1 = false;
 			return;
 		} else if(userPwd1.length() < 4) {
 			pwdVali1.setIcon(xImg);
-			showDialog("ºñ¹Ð¹øÈ£´Â 4±ÛÀÚ ÀÌ»ó ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			inputValiLb.setText("ºñ¹Ð¹øÈ£´Â 4±ÛÀÚ ÀÌ»ó ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ 4ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+			inputValiLb.setText("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ 4ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			pwdTf1.requestFocus(true);
 			pwdFlag1 = false;
 			return;
@@ -331,15 +331,15 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 		
 		if(userPwd2.equals("")) {
 			pwdVali2.setIcon(xImg);
-			showDialog("ºñ¹Ð¹øÈ£ È®ÀÎÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			inputValiLb.setText("ºñ¹Ð¹øÈ£ È®ÀÎÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½ï¿½Ð¹ï¿½È£ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+			inputValiLb.setText("ï¿½ï¿½Ð¹ï¿½È£ È®ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			pwdTf2.requestFocus(true);
 			pwdFlag2 = false;
 			return;
 		} else if(!userPwd2.equals(userPwd1)) {
 			pwdVali2.setIcon(xImg);
-			showDialog("ºñ¹Ð¹øÈ£¸¦ µ¿ÀÏÇÏ°Ô ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			inputValiLb.setText("ºñ¹Ð¹øÈ£¸¦ µ¿ÀÏÇÏ°Ô ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+			inputValiLb.setText("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			pwdTf2.requestFocus(true);
 			pwdFlag2 = false;
 			return;
@@ -349,15 +349,15 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 		
 		if(userName.equals("")) {
 			nameVali.setIcon(xImg);
-			showDialog("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			inputValiLb.setText("ÀÌ¸§À» ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+			inputValiLb.setText("ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			nameTf.requestFocus(true);
 			nameFlag = false;
 			return;
 		} else if(userName.length() < 2) {
 			nameVali.setIcon(xImg);
-			showDialog("ÀÌ¸§À» Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			inputValiLb.setText("ÀÌ¸§À» Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+			inputValiLb.setText("ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			nameTf.requestFocus(true);
 			nameFlag = false;
 			return;
@@ -367,15 +367,15 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 		
 		if(userTel.equals("")) {
 			telVali.setIcon(xImg);
-			showDialog("¿¬¶ôÃ³¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			inputValiLb.setText("¿¬¶ôÃ³¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+			inputValiLb.setText("ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			telTf.requestFocus(true);
 			telFlag = false;
 			return;
 		} else if(userTel.length() < 11) {
 			telVali.setIcon(xImg);
-			showDialog("¿¬¶ôÃ³¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			inputValiLb.setText("¿¬¶ôÃ³¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+			inputValiLb.setText("ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			telTf.requestFocus(true);
 			telFlag = false;
 			return;
@@ -384,15 +384,15 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 			
 			for(int i=0; i<userTel.length(); i++){
 				char c = userTel.charAt(i);
-				if(c<48 || c> 57) {	//¼ýÀÚ°¡ ¾Æ´Ñ °æ¿ì
+				if(c<48 || c> 57) {	//ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ï¿½
 					flag = false;
 					break;
 				}
 			}
 			if(!flag) {
 				telVali.setIcon(xImg);
-				showDialog("¿¬¶ôÃ³´Â ¼ýÀÚ¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-				inputValiLb.setText("¿¬¶ôÃ³´Â ¼ýÀÚ¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				showDialog("ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+				inputValiLb.setText("ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 				telTf.requestFocus(true);
 				telFlag = false;
 				return;
@@ -403,15 +403,15 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 		
 		if(userAddr.equals("")) {
 			addrVali.setIcon(xImg);
-			showDialog("ÁÖ¼Ò¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			inputValiLb.setText("ÁÖ¼Ò¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½Ö¼Ò¸ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+			inputValiLb.setText("ï¿½Ö¼Ò¸ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			addrTf.requestFocus(true);
 			addrFlag = false;
 			return;
 		} else if(userAddr.length() < 5) {
 			addrVali.setIcon(xImg);
-			showDialog("ÁÖ¼Ò¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
-			inputValiLb.setText("ÁÖ¼Ò¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+			showDialog("ï¿½Ö¼Ò¸ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
+			inputValiLb.setText("ï¿½Ö¼Ò¸ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			addrTf.requestFocus(true);
 			addrFlag = false;
 			return;
@@ -425,7 +425,7 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 	}
 	
 	public void showDialog(String message) {
-		JOptionPane.showMessageDialog(this, message, "¿À·ù",
+		JOptionPane.showMessageDialog(this, message, "ï¿½ï¿½ï¿½ï¿½",
 				JOptionPane.ERROR_MESSAGE);
 	}
 	
@@ -442,13 +442,13 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 			if(userId.length() < 4) {
 				idVali.setIcon(xImg);
 				idFlag = false;
-				inputValiLb.setText("¾ÆÀÌµð´Â 4±ÛÀÚ ÀÌ»ó ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				inputValiLb.setText("ï¿½ï¿½ï¿½Ìµï¿½ï¿½ 4ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			} else {
 				result = dao.idCheck(userId);
 				if(result > 0) {
 					idVali.setIcon(xImg);
 					idFlag = false;
-					inputValiLb.setText("Áßº¹µÈ ¾ÆÀÌµðÀÔ´Ï´Ù.");
+					inputValiLb.setText("ï¿½ßºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½Ô´Ï´ï¿½.");
 				} else {
 					idVali.setIcon(checkImg);
 					idFlag = true;
@@ -464,12 +464,12 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 				pwdVali1.setIcon(xImg);
 				pwdFlag1 = false;
 				pwdFlag2 = false;
-				inputValiLb.setText("ºñ¹Ð¹øÈ£´Â 4±ÛÀÚ ÀÌ»ó ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				inputValiLb.setText("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ 4ï¿½ï¿½ï¿½ï¿½ ï¿½Ì»ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			}else if(userPwd2.length() >0 && !userPwd1.equals(userPwd2)) {
 				pwdVali2.setIcon(xImg);
 				pwdFlag1 = false;
 				pwdFlag2 = false;
-				inputValiLb.setText("ºñ¹Ð¹øÈ£¸¦ µ¿ÀÏÇÏ°Ô ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				inputValiLb.setText("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			} else {
 				if(userPwd2.length() > 0) {
 					pwdVali2.setIcon(checkImg);
@@ -488,12 +488,12 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 				pwdVali2.setIcon(xImg);
 				pwdFlag1 = false;
 				pwdFlag2 = false;
-				inputValiLb.setText("ºñ¹Ð¹øÈ£ È®ÀÎÀ» Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				inputValiLb.setText("ï¿½ï¿½Ð¹ï¿½È£ È®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			} else if(!userPwd1.equals(userPwd2)) {
 				pwdVali2.setIcon(xImg);
 				pwdFlag1 = false;
 				pwdFlag2 = false;
-				inputValiLb.setText("ºñ¹Ð¹øÈ£¸¦ µ¿ÀÏÇÏ°Ô ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				inputValiLb.setText("ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			} else {
 				pwdVali2.setIcon(checkImg);
 				pwdFlag1 = true;
@@ -507,7 +507,7 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 			if(userName.length() < 2) {
 				nameVali.setIcon(xImg);
 				nameFlag = false;
-				inputValiLb.setText("ÀÌ¸§À» Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				inputValiLb.setText("ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			} else {
 				nameVali.setIcon(checkImg);
 				nameFlag = true;
@@ -522,11 +522,11 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 			if(userTel.length() < 11) {
 				telVali.setIcon(xImg);
 				telFlag = false;
-				inputValiLb.setText("¿¬¶ôÃ³´Â ¼ýÀÚ¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				inputValiLb.setText("ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			} else {
 				for(int i=0; i<userTel.length(); i++){
 					char c = userTel.charAt(i);
-					if(c<48 || c> 57) {	//¼ýÀÚ°¡ ¾Æ´Ñ °æ¿ì
+					if(c<48 || c> 57) {	//ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ï¿½
 						flag = false;
 						break;
 					}
@@ -534,7 +534,7 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 				if(!flag) {
 					telVali.setIcon(xImg);
 					telFlag = false;
-					inputValiLb.setText("¿¬¶ôÃ³´Â ¼ýÀÚ¸¸ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+					inputValiLb.setText("ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 				} else {
 					telVali.setIcon(checkImg);
 					telFlag = true;
@@ -548,7 +548,7 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 			if(userAddr.length() < 5) {
 				addrVali.setIcon(xImg);
 				addrFlag = false;
-				inputValiLb.setText("ÁÖ¼Ò¸¦ Á¤È®È÷ ÀÔ·ÂÇØÁÖ¼¼¿ä.");
+				inputValiLb.setText("ï¿½Ö¼Ò¸ï¿½ ï¿½ï¿½È®ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.");
 			} else {
 				addrVali.setIcon(checkImg);
 				addrFlag = true;
