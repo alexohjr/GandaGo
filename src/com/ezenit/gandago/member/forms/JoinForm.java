@@ -93,7 +93,7 @@ public class JoinForm extends JFrame implements ActionListener, KeyListener {
 	boolean idFlag, pwdFlag1, pwdFlag2, nameFlag, telFlag, addrFlag;
 	
 	public JoinForm() {
-		setTitle("간다오고고");
+		setTitle("간다오고고");  
 		setSize(500, 800);
 		setLocationRelativeTo(null);
 		setVisible(true);
