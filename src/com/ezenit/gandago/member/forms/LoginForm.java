@@ -61,7 +61,7 @@ public class LoginForm extends JFrame implements ActionListener {
 	JButton joinBtn = new JButton("ȸ������");
 	  
 	public LoginForm() {
-		setTitle("창화닝Go!");
+		setTitle("승갱이Go!");
 		setSize(500, 800);
 		setLocationRelativeTo(null);
 		setVisible(true);
