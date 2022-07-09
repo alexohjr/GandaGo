@@ -30,7 +30,7 @@ public class LoginForm extends JFrame implements ActionListener {
 	Container container = getContentPane();
 	MemberDAO dao = MemberDAO.getInstance();
 	
-	// ¼±¾ð 
+	// ï¿½ï¿½ï¿½ï¿½ 
 	JButton button1 = new JButton(CommonInfo.userId);
 	
 	
@@ -49,19 +49,19 @@ public class LoginForm extends JFrame implements ActionListener {
 	JPanel searchPn = new JPanel();
 	
 	JLabel loginLb = new JLabel("L O G I N");
-	JLabel idLb = new JLabel("¾ÆÀÌµð");
-	JLabel pwdLb = new JLabel("ºñ¹Ð¹øÈ£");
+	JLabel idLb = new JLabel("ï¿½ï¿½ï¿½Ìµï¿½");
+	JLabel pwdLb = new JLabel("ï¿½ï¿½Ð¹ï¿½È£");
 	
 	JTextField idTf = new JTextField();
 	JPasswordField pwdTf = new JPasswordField();
 	
-	JButton loginBtn = new JButton("·Î ±× ÀÎ");
-	JButton searchIdBtn = new JButton("¾ÆÀÌµðÃ£±â");
-	JButton searchPwdBtn = new JButton("ºñ¹Ð¹øÈ£Ã£±â");
-	JButton joinBtn = new JButton("È¸¿ø°¡ÀÔ");
+	JButton loginBtn = new JButton("ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½");
+	JButton searchIdBtn = new JButton("ï¿½ï¿½ï¿½Ìµï¿½Ã£ï¿½ï¿½");
+	JButton searchPwdBtn = new JButton("ï¿½ï¿½Ð¹ï¿½È£Ã£ï¿½ï¿½");
+	JButton joinBtn = new JButton("È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	
 	public LoginForm() {
-		setTitle("°£´ÙGo");
+		setTitle("ìŠ¹ê²½Go");
 		setSize(500, 800);
 		setLocationRelativeTo(null);
 		setVisible(true);
@@ -171,13 +171,13 @@ public class LoginForm extends JFrame implements ActionListener {
 		String userPwd = pwdTf.getText().trim();
 		
 		if(userId.equals("")) {
-			JOptionPane.showMessageDialog(this, "¾ÆÀÌµð¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.", "",
+			JOptionPane.showMessageDialog(this, "ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.", "",
 					JOptionPane.INFORMATION_MESSAGE);
 			idTf.requestFocus(true);
 			return;
 		}
 		if(userPwd.equals("")) {
-			JOptionPane.showMessageDialog(this, "ºñ¹Ð¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.", "",
+			JOptionPane.showMessageDialog(this, "ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½.", "",
 					JOptionPane.INFORMATION_MESSAGE);
 			pwdTf.requestFocus(true);
 			return;
@@ -185,11 +185,11 @@ public class LoginForm extends JFrame implements ActionListener {
 		
 		int result = dao.loginCheck(userId, userPwd);
 		if(result > 0) {
-			CommonInfo.userId = userId;	// ·Î±×ÀÎ °èÁ¤ÀÇ ¾ÆÀÌµð°ª ³Ñ°ÜÁÖ±â
+			CommonInfo.userId = userId;	// ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ ï¿½Ñ°ï¿½ï¿½Ö±ï¿½
 			new StoreListForm();				
-			setVisible(false);				// ÇöÀç Ã¢ ¼û±â±â
+			setVisible(false);				// ï¿½ï¿½ï¿½ï¿½ Ã¢ ï¿½ï¿½ï¿½ï¿½ï¿½
 		} else {
-			JOptionPane.showMessageDialog(this, "°¡ÀÔÇÏÁö ¾ÊÀº ¾ÆÀÌµðÀÌ°Å³ª, Àß¸øµÈ ºñ¹Ð¹øÈ£ÀÔ´Ï´Ù.", "·Î±×ÀÎ ½ÇÆÐ",
+			JOptionPane.showMessageDialog(this, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ï¿½Ì°Å³ï¿½, ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½Ð¹ï¿½È£ï¿½Ô´Ï´ï¿½.", "ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½",
 					JOptionPane.ERROR_MESSAGE);
 		}
 		
