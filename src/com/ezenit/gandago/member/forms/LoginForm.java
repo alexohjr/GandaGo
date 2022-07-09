@@ -59,7 +59,7 @@ public class LoginForm extends JFrame implements ActionListener {
 	JButton searchIdBtn = new JButton("���̵�ã��");
 	JButton searchPwdBtn = new JButton("��й�ȣã��");
 	JButton joinBtn = new JButton("ȸ������");
-	
+	  
 	public LoginForm() {
 		setTitle("승경Go");
 		setSize(500, 800);
